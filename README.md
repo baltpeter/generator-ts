@@ -1,6 +1,6 @@
 # @baltpeter/generator-ts
 
-> A Yeoman generator that I for scaffolding TypeScript modules.
+> A Yeoman generator that I use for scaffolding TypeScript modules.
 
 This Yeoman generator generates the TypeScript boilerplate I use for my modules, using my configs for ESLint, Prettier and TypeScript. You probably don't want to use this unless you're working on a project with me.
 
