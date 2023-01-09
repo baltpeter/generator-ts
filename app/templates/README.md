@@ -27,7 +27,7 @@ TODO: Describe the usage example(s).
 ```
 -->
 
-## LICENSE
+## License
 
 This code is licensed under the MIT license, see the [`LICENSE`](LICENSE) file for details.
 

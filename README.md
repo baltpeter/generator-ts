@@ -43,6 +43,6 @@ Arguments:
   moduleName  # The name of the module (this will also be the output directory).  Type: String  Required: false
 ```
 
-## LICENSE
+## License
 
 This generator and the boilerplate it generates are licensed under the CC0 license, see the [`LICENSE`](LICENSE) file for details.
