@@ -1,4 +1,14 @@
 {
     "extends": "@baltpeter/tsconfig",
-    "include": ["src/**/*"]
+    "include": ["src/**/*"]<% if (useTypeDoc) { %>,
+    "typedocOptions": {
+        "plugin": ["typedoc-plugin-markdown"],
+        "entryPoints": ["src/index.ts"],
+        "out": "docs",
+        "readme": "none",
+        "excludeNotDocumented": true,
+        "includeVersion": false,
+        "githubPages": false,
+        "gitRevision": "main"
+    }<% } %>
 }

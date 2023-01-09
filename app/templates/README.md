@@ -11,7 +11,11 @@ You can install <%= moduleName %> using yarn or npm:
 ```sh
 yarn add <%= moduleName %>
 # or `npm i <%= moduleName %>`
-```
+```<% if (useTypeDoc) { %>
+
+## API reference
+
+A full API reference can be found in the [`docs` folder](/docs/README.md).<% } %>
 
 <!--
 ## Example usage

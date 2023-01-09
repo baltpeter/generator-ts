@@ -33,6 +33,10 @@ export default class extends Generator {
             type: String,
             description: 'The GitHub repository where the module will be stored.',
         });
+        this.option('useTypeDoc', {
+            type: Boolean,
+            description: 'Whether to use TypeDoc for generating the API docs as Markdown.',
+        });
     }
 
     async prompting() {
@@ -78,6 +82,11 @@ export default class extends Generator {
                 type: 'confirm',
                 when: (answers) => isScoped(answers.moduleName || this.options.moduleName),
             },
+            {
+                name: 'useTypeDoc',
+                description: "Do you want to use TypeDoc for generating the module's API docs as Markdown?",
+                type: 'confirm',
+            },
         ]);
     }
 
@@ -98,6 +107,7 @@ export default class extends Generator {
             email: arg('email'),
             githubRepo: arg('githubRepo'),
             accessPublic: arg('accessPublic'),
+            useTypeDoc: arg('useTypeDoc'),
         };
 
         this.fs.copyTpl(this.templatePath('**/*'), this.destinationPath(), tpl, undefined, {
@@ -126,6 +136,7 @@ export default class extends Generator {
             'prettier',
             'typescript',
         ]);
+        if (arg('useTypeDoc')) await this.addDevDependencies(['typedoc', 'typedoc-plugin-markdown']);
     }
 
     end() {

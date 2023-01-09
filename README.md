@@ -29,14 +29,15 @@ Usage:
 
 Options:
   -h,   --help           # Print the generator's options and usage
-        --skip-cache     # Do not remember prompt answers                          Default: false
-        --skip-install   # Do not automatically install dependencies               Default: false
-        --force-install  # Fail on install dependencies error                      Default: false
-        --ask-answered   # Show prompts for already configured options             Default: false
+        --skip-cache     # Do not remember prompt answers                                   Default: false
+        --skip-install   # Do not automatically install dependencies                        Default: false
+        --force-install  # Fail on install dependencies error                               Default: false
+        --ask-answered   # Show prompts for already configured options                      Default: false
         --description    # A short one-sentence description of the module.
         --name           # Your name.
         --email          # Your email.
         --githubRepo     # The GitHub repository where the module will be stored.
+        --useTypeDoc     # Whether to use TypeDoc for generating the API docs as Markdown.
 
 Arguments:
   moduleName  # The name of the module (this will also be the output directory).  Type: String  Required: false
