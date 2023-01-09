@@ -1,0 +1,32 @@
+{
+    "name": "@baltpeter/generator-ts",
+    "version": "0.0.0",
+    "description": "A Yeoman generator that Benjamin Altpeter uses for scaffolding TypeScript modules.",
+    "keywords": [
+        "yeoman-generator",
+        "typescript",
+        "boilerplate",
+        "scaffolding"
+    ],
+    "bugs": "https://github.com/baltpeter/generator-ts/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/baltpeter/generator-ts.git"
+    },
+    "license": "CC0-1.0",
+    "author": "Benjamin Altpeter <hi@bn.al>",
+    "type": "module",
+    "files": [
+        "app"
+    ],
+    "dependencies": {
+        "is-scoped": "^3.0.0",
+        "yeoman-generator": "^5.7.0"
+    },
+    "devDependencies": {
+        "@types/yeoman-generator": "^5.2.11"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

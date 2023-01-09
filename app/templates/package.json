@@ -1,0 +1,46 @@
+{
+    "name": "<%= moduleName %>",
+    "version": "0.0.0",
+    "description": "<%= description %>",
+    "bugs": "https://github.com/<%= githubRepo %>/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/<%= githubRepo %>.git"
+    },
+    "license": "MIT",
+    "author": "<%= name %> <<%= email %>>",
+    "type": "module",
+    "main": "dist/index.js",
+    "source": "src/index.ts",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "build": "parcel build",
+        "prepack": "rm -rf dist && yarn build",
+        "test": "echo 'TODO: No tests specified yet.'",
+        "watch": "parcel watch",
+        "lint": "tsc && eslint . --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx && git diff --check",
+        "fix": "yarn eslint . --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx --fix"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && tsc"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,js,tsx,jsx,css,scss,json}": [
+            "prettier --write"
+        ],
+        "*.{ts,js,tsx,jsx}": [
+            "eslint --fix"
+        ]
+    },
+    "prettier": "@baltpeter/prettier-config",
+    "dependencies": {},
+    "devDependencies": {}<% if (accessPublic) { %>,
+    "publishConfig": {
+        "access": "public"
+    }<% } %>
+}
