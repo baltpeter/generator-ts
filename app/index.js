@@ -104,6 +104,10 @@ export default class extends Generator {
             globOptions: { dot: true },
         });
 
+        // NPM renames a `.gitignore` to `.npmignore` on package install if the latter doesn't already exist
+        // (https://github.com/npm/npm/issues/1862), so we have to work around that.
+        this.fs.move(this.destinationPath('_gitignore'), this.destinationPath('.gitignore'));
+
         // Apart from husky, we always want the latest versions of these, so we are adding them here instead of in the
         // package.json.
         await this.addDevDependencies([
