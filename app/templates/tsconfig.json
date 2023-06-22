@@ -1,6 +1,7 @@
 {
     "extends": "@baltpeter/tsconfig",
-    "include": ["src/**/*"]<% if (useTypeDoc) { %>,
+    "include": ["src/**/*"],
+    "exclude": ["**/*.tmp.ts"]<% if (useTypeDoc) { %>,
     "typedocOptions": {
         "plugin": ["typedoc-plugin-markdown"],
         "entryPoints": ["src/index.ts"],
