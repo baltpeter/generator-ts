@@ -18,7 +18,7 @@
     ],
     "scripts": {
         "build": "parcel build",
-        "prepack": "rm -rf dist && yarn build<% if (useTypeDoc) { %> && yarn typedoc<% } %>",
+        "prepack": "rm -rf .parcel-cache dist && yarn build<% if (useTypeDoc) { %> && yarn typedoc<% } %>",
         "test": "echo 'TODO: No tests specified yet.'",
         "watch": "parcel watch",
         "lint": "tsc && eslint . --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx && git diff --check",
